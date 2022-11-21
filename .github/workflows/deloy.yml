@@ -26,7 +26,7 @@ jobs:
           node-version: 14
       - run: |
           dotnet tool restore
-          npm ci
+          npm ci --verbose
           npm run build
       - name: Build And Deploy
         id: builddeploy

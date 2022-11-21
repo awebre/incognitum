@@ -2,9 +2,6 @@ namespace App
 
 open System
 open App.OAuth
-open Fable.Core
-open Fable.Core.JS
-open Fable.SimpleJson
 open Feliz
 open Feliz.Router
 open Thoth.Fetch
