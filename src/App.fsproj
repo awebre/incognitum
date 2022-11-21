@@ -11,7 +11,6 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Fable.Fetch" Version="2.6.0" />
-        <PackageReference Include="Fable.SimpleJson" Version="3.24.0" />
         <PackageReference Include="Feliz" Version="1.66.0" />
         <PackageReference Include="Feliz.Router" Version="3.8.0" />
         <PackageReference Include="Fable.DateFunctions" Version="3.9.0" />
