@@ -26,7 +26,6 @@ jobs:
           node-version: 14
       - run: |
           dotnet tool restore
-          dotnet paket install
           npm ci
           npm run build
       - name: Build And Deploy
