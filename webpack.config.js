@@ -4,6 +4,7 @@
 var path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -61,6 +62,11 @@ var commonPlugins = [
     silent: false,
     systemvars: true,
   }),
+
+  new WorkboxWebpackPlugin.InjectManifest({
+    swSrc: "./src/src-sw.js",
+    swDest: "sw.js",
+  }),
 ];
 
 module.exports = {
@@ -117,12 +123,10 @@ module.exports = {
   },
   // Configuration for webpack-dev-server
   devServer: {
-    publicPath: "/",
-    contentBase: resolve(CONFIG.assetsDir),
+    static: resolve(CONFIG.assetsDir),
     port: CONFIG.devServerPort,
     proxy: CONFIG.devServerProxy,
     hot: true,
-    inline: true,
     historyApiFallback: true,
   },
   // - babel-loader: transforms JS to old syntax (compatible with old browsers)
