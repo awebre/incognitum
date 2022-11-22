@@ -1,6 +1,6 @@
 {
-  "short_name": "React PWA",
-  "name": "React PWA Example",
+  "short_name": "Incognitum",
+  "name": "Incognitum: A Mastodon Client",
   "icons": [
     {
       "src": "favicon-16.png",
