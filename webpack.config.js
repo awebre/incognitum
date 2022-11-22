@@ -107,7 +107,10 @@ module.exports = {
     ? commonPlugins.concat([
         new MiniCssExtractPlugin({ filename: "style.[contenthash].css" }),
         new CopyWebpackPlugin({
-          patterns: [{ from: resolve(CONFIG.assetsDir) }],
+          patterns: [
+            { from: resolve(CONFIG.assetsDir) },
+            { from: "./src/manifest.json" },
+          ],
         }),
       ])
     : commonPlugins.concat([new ReactRefreshWebpackPlugin()]),
