@@ -13,6 +13,15 @@ type Components =
     [<ReactComponent>]
     static member MainPage() =
         let (domain, setDomain) = React.useState("")
+        let (instances, saveInstances) = Hooks.useSavedInstances()
+        let navigateToInstance() =
+            match instances with
+                head::_ -> Router.navigate()
+                | _ -> ignore 0 // TODO: better way to express a "no op"?
+                
+            React.createDisposable(fun() -> ignore 0)
+
+        React.useEffect(navigateToInstance, [instances]:obj[])
         let submit() =
             promise {
                 let oauthRelativeUrl = Router.formatPath("oauth", "redirect")

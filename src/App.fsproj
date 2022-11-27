@@ -6,8 +6,10 @@
         <None Include="index.html" />
         <Compile Include="OAuth.fs" />
         <Compile Include="Extensions.fs" />
+        <Compile Include="Hooks.fs" />
         <Compile Include="Components.fs" />
         <Compile Include="Main.fs" />
+        <Compile Include="IdbKeyVal.fs" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Fable.Fetch" Version="2.6.0" />
