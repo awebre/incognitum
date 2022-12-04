@@ -1,0 +1,25 @@
+{
+  "short_name": "Incognitum",
+  "name": "Incognitum: A Mastodon Client",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256 128x128 64x64 32x32 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#999999",
+  "background_color": "#221f1f"
+}
